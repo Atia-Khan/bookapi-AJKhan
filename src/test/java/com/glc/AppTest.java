@@ -68,7 +68,7 @@ public class AppTest {
         ReadingList readingList = new ReadingList();
 
         List<String> result = new LinkedList<>();
-        result.add("Think and Grow Rich by Napoleon Hill, 300 pages, 2016, read on January 15, 2023,****");
+        result.add("Atomic Habits by James Clear, 240 pages, 2018, read on Feburary 1, 2022,*****");
 
         // Execute
         readingList.addBook(book, "Feburary 1, 2022", 5);
