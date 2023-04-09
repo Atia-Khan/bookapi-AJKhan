@@ -56,7 +56,7 @@ public class AppTest
          readingList.addBook(book2, "January 15, 2023", 4);
  
          //Assert
-         assertEquals(1,readingList.numberRead());
+         assertEquals(2,readingList.numberRead());
      }
 
 
