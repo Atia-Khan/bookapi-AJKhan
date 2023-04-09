@@ -90,7 +90,7 @@ public class AppTest {
             ReadingList readingList = new ReadingList();
     
             List<String> result = new LinkedList<>();
-            result.add("Atomic Habits by James Clear, 240 pages, 2018, read on Feburary 1, 2022,*****");
+            result.add("Think and Grow Rich by Napoleon Hill, 300 pages, 2016, read on January 15, 2023,****");
     
             //Execute
             readingList.addBook(book2, "January 15, 2023", 4);
@@ -99,5 +99,27 @@ public class AppTest {
             assertEquals(result,readingList.getBooks());
         
          }
+
+         //AC 6:Given when I call `getBooksByRating()`, I should return a list of books that all have that rating.
+
+         @Test
+     public void getBooksByRating(){
+        //Setup
+        Book book = new Book("Atomic Habits", "James Clear", 240, 2018);
+        Book book2 = new Book("Think and Grow Rich", "Napoleon Hill", 300, 2016);
+        ReadingList readingList = new ReadingList();
+
+        List<String> result = new LinkedList<>();
+        result.add("Think and Grow Rich by Napoleon Hill, 300 pages, 2016, read on January 15, 2023,****");
+
+
+        //Execute
+        readingList.addBook(book, "Feburary 1, 2022", 5);
+        readingList.addBook(book2, "January 15, 2023", 4);
+         
+        //Assert
+        assertEquals(result,readingList.getBooksByRating(4));
+    
+     }
 
 }
